@@ -1,0 +1,92 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+  display: grid;
+  
+  
+}
+#root{
+justify-self: center;
+
+
+
+}
+#head{
+  margin: 0px;
+  position: sticky;
+  top: 0px;
+  font-size: 100px;
+transition: all 1s;
+  font-family: Chiller;
+  text-align: center;
+  background-color: #242424;
+  
+}
+#head:hover{
+  filter: blur(5px);
+  transition: transform 1s;
+}
+#head:hover ~ .todobody {
+  transform: scale(110%);
+  /* z-index: 0; */
+  transition: transform 1s;
+}
+.todobody{
+  position:sticky;
+  top: 60px;
+  transition: transform 1s;
+  /* z-index: -1; */
+}
+.todobody{
+  background-color: rgb(81, 31, 31);
+  border: 5px solid black;
+  width: 60vw;
+  min-height: 70vh;
+  /* z-index: -1; */
+}
+
+.todobody > div:nth-child(2){
+  display: grid;  
+  grid-template-columns: 20% 60% 20%;
+}
+.todobody >div form{
+
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  height: 30px;
+}
+.todobody >div{
+  display: flex;
+  flex-direction: column;
+}
+.todobody > div>div:not(:first-of-type){
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  
+}
+.todobody > div>div:first-of-type{
+  transition: transform 1s;
+  position: sticky;
+  top: -1px;
+}
+.todobody >div>div:not(:first-of-type)>div{
+  border: 1px solid black;
+  
+}
+
+
+
+
+
